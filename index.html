@@ -4,481 +4,246 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aizhankasmm — SMM & Таргет · Астана</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --accent: #1B6AE4;
-    --accent-light: #EBF1FD;
-    --black: #0f0f0f;
-    --white: #fafafa;
-    --gray: #888;
-    --light: #f4f4f2;
-    --serif: 'Playfair Display', serif;
-    --sans: 'DM Sans', sans-serif;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: var(--sans);
-    background: var(--white);
-    color: var(--black);
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+:root {
+  --accent: #1B6AE4;
+  --accent-light: #EBF1FD;
+  --black: #0f0f0f;
+  --white: #fafafa;
+  --gray: #888;
+  --mid: #555;
+  --light: #f4f4f2;
+  --serif: 'Playfair Display', serif;
+  --sans: 'DM Sans', sans-serif;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--sans); background:var(--white); color:var(--black); font-weight:300; line-height:1.7; overflow-x:hidden; }
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.4rem 4rem;
-    background: rgba(250,250,250,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-  }
-  .nav-logo {
-    font-family: var(--serif);
-    font-size: 1.3rem;
-    letter-spacing: 0.02em;
-    color: var(--black);
-    text-decoration: none;
-  }
-  .nav-logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a {
-    text-decoration: none; color: var(--black);
-    font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-    font-weight: 400;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--accent); }
-  .nav-cta {
-    background: var(--accent); color: white;
-    padding: 0.6rem 1.5rem; border-radius: 100px;
-    text-decoration: none; font-size: 0.85rem; font-weight: 500;
-    letter-spacing: 0.04em;
-    transition: opacity 0.2s;
-  }
-  .nav-cta:hover { opacity: 0.85; }
+/* ── NAV ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.2rem 4rem;
+  background:rgba(250,250,250,0.93); backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+}
+.nav-logo { font-family:var(--serif); font-size:1.25rem; color:var(--black); text-decoration:none; }
+.nav-logo span { color:var(--accent); }
+.nav-links { display:flex; gap:2.2rem; list-style:none; }
+.nav-links a { text-decoration:none; color:var(--black); font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; font-weight:400; transition:color .2s; }
+.nav-links a:hover { color:var(--accent); }
+.nav-cta { background:var(--accent); color:white; padding:0.55rem 1.4rem; border-radius:100px; text-decoration:none; font-size:0.82rem; font-weight:500; transition:opacity .2s; }
+.nav-cta:hover { opacity:.85; }
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 8rem 4rem 4rem;
-    gap: 4rem;
-  }
-  .hero-text {}
-  .hero-tag {
-    display: inline-block;
-    background: var(--accent-light);
-    color: var(--accent);
-    padding: 0.35rem 1rem;
-    border-radius: 100px;
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-bottom: 1.8rem;
-  }
-  .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-  }
-  .hero h1 em {
-    font-style: normal;
-    color: var(--accent);
-  }
-  .hero-desc {
-    font-size: 1.05rem;
-    color: #555;
-    max-width: 480px;
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
-  }
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--accent); color: white;
-    padding: 0.9rem 2rem; border-radius: 100px;
-    text-decoration: none; font-weight: 500; font-size: 0.95rem;
-    transition: opacity 0.2s, transform 0.2s;
-    display: inline-flex; align-items: center; gap: 0.5rem;
-  }
-  .btn-primary:hover { opacity: 0.87; transform: translateY(-1px); }
-  .btn-secondary {
-    border: 1.5px solid var(--black); color: var(--black);
-    padding: 0.9rem 2rem; border-radius: 100px;
-    text-decoration: none; font-weight: 400; font-size: 0.95rem;
-    transition: all 0.2s;
-    display: inline-flex; align-items: center; gap: 0.5rem;
-  }
-  .btn-secondary:hover { background: var(--black); color: white; }
-  .hero-stats {
-    display: flex; gap: 3rem; margin-top: 3.5rem;
-    padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.08);
-  }
-  .stat-num {
-    font-family: var(--serif); font-size: 2rem; font-weight: 700;
-    color: var(--accent);
-  }
-  .stat-label { font-size: 0.8rem; color: var(--gray); margin-top: 0.2rem; letter-spacing: 0.04em; }
+/* ── HERO ── */
+.hero {
+  min-height:100vh; display:grid; grid-template-columns:1fr 1fr;
+  align-items:center; padding:8rem 4rem 4rem; gap:4rem;
+}
+.hero-tag {
+  display:inline-block; background:var(--accent-light); color:var(--accent);
+  padding:.35rem 1rem; border-radius:100px; font-size:.78rem;
+  letter-spacing:.08em; text-transform:uppercase; font-weight:500; margin-bottom:1.6rem;
+}
+.hero h1 { font-family:var(--serif); font-size:clamp(2.6rem,4.5vw,4rem); line-height:1.15; margin-bottom:1.4rem; }
+.hero h1 em { font-style:normal; color:var(--accent); }
+.hero-desc { font-size:1rem; color:var(--mid); max-width:480px; margin-bottom:2.2rem; line-height:1.85; }
+.hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+.btn { display:inline-flex; align-items:center; gap:.5rem; padding:.85rem 1.9rem; border-radius:100px; font-weight:500; font-size:.92rem; text-decoration:none; transition:all .2s; }
+.btn-primary { background:var(--accent); color:white; }
+.btn-primary:hover { opacity:.87; transform:translateY(-1px); }
+.btn-outline { border:1.5px solid var(--black); color:var(--black); }
+.btn-outline:hover { background:var(--black); color:white; }
+.btn-wa { background:#25d366; color:white; }
+.btn-wa:hover { opacity:.88; transform:translateY(-1px); }
+.btn-ig { background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:white; }
+.btn-ig:hover { opacity:.88; transform:translateY(-1px); }
 
-  .hero-visual {
-    display: flex; align-items: center; justify-content: center;
-    position: relative;
-  }
-  .hero-card {
-    background: white;
-    border-radius: 24px;
-    padding: 2.5rem;
-    box-shadow: 0 2px 40px rgba(0,0,0,0.08);
-    max-width: 380px;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-  }
-  .hero-avatar {
-    width: 80px; height: 80px;
-    background: linear-gradient(135deg, var(--accent) 0%, #5B9AF8 100%);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif); font-size: 1.8rem; color: white;
-    margin-bottom: 1.2rem;
-    font-weight: 700;
-  }
-  .hero-card h3 { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 0.3rem; }
-  .hero-card p { font-size: 0.85rem; color: var(--gray); margin-bottom: 1.5rem; }
-  .skills-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
-  .chip {
-    background: var(--light); padding: 0.35rem 0.85rem;
-    border-radius: 100px; font-size: 0.78rem; font-weight: 400;
-    color: #444;
-  }
-  .chip.hot { background: var(--accent-light); color: var(--accent); }
-  .availability {
-    display: flex; align-items: center; gap: 0.6rem;
-    font-size: 0.82rem; color: #444;
-  }
-  .dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: #22c55e;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-  .bg-circle {
-    position: absolute;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: var(--accent-light);
-    top: 50%; left: 50%;
-    transform: translate(-40%, -50%);
-    z-index: 1;
-  }
+.hero-stats { display:flex; gap:2.5rem; margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(0,0,0,0.08); flex-wrap:wrap; }
+.stat-num { font-family:var(--serif); font-size:1.9rem; font-weight:700; color:var(--accent); }
+.stat-label { font-size:.78rem; color:var(--gray); margin-top:.15rem; }
 
-  /* SECTIONS */
-  section { padding: 6rem 4rem; }
-  .section-label {
-    display: inline-block;
-    font-size: 0.75rem; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent);
-    font-weight: 500; margin-bottom: 1rem;
-  }
-  .section-title {
-    font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.25; font-weight: 700; max-width: 600px;
-    margin-bottom: 3.5rem;
-  }
-  .section-title span { color: var(--accent); }
+.hero-visual { display:flex; align-items:center; justify-content:center; position:relative; }
+.bg-blob { position:absolute; width:380px; height:380px; border-radius:50%; background:var(--accent-light); top:50%; left:50%; transform:translate(-38%,-50%); z-index:1; }
+.hero-card { background:white; border-radius:24px; padding:2.2rem; box-shadow:0 2px 40px rgba(0,0,0,0.08); max-width:360px; width:100%; position:relative; z-index:2; }
+.hero-avatar { width:72px; height:72px; background:linear-gradient(135deg,var(--accent),#5B9AF8); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:1.6rem; color:white; font-weight:700; margin-bottom:1rem; }
+.hero-card h3 { font-family:var(--serif); font-size:1.2rem; margin-bottom:.25rem; }
+.hero-card p { font-size:.82rem; color:var(--gray); margin-bottom:1.3rem; }
+.chips { display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1.3rem; }
+.chip { background:var(--light); padding:.3rem .8rem; border-radius:100px; font-size:.75rem; color:#444; }
+.chip.hot { background:var(--accent-light); color:var(--accent); }
+.avail { display:flex; align-items:center; gap:.55rem; font-size:.8rem; color:#444; }
+.dot { width:8px; height:8px; border-radius:50%; background:#22c55e; animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 
-  /* UTP */
-  .utp { background: var(--black); color: white; }
-  .utp .section-label { color: var(--accent); }
-  .utp .section-title { color: white; }
-  .utp-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 16px; overflow: hidden;
-  }
-  .utp-item {
-    background: var(--black); padding: 2.5rem 2rem;
-    transition: background 0.25s;
-  }
-  .utp-item:hover { background: #1a1a1a; }
-  .utp-icon {
-    width: 48px; height: 48px; border-radius: 12px;
-    background: var(--accent); display: flex; align-items: center;
-    justify-content: center; margin-bottom: 1.2rem;
-    font-size: 1.3rem;
-  }
-  .utp-item h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.7rem; color: white; }
-  .utp-item p { font-size: 0.88rem; color: #aaa; line-height: 1.7; }
+/* ── SECTION BASE ── */
+.section { padding:6rem 4rem; }
+.section.dark { background:var(--black); color:white; }
+.section.light { background:var(--light); }
+.section-label { display:inline-block; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:500; margin-bottom:.9rem; }
+.section-title { font-family:var(--serif); font-size:clamp(1.7rem,2.8vw,2.6rem); line-height:1.25; font-weight:700; margin-bottom:3rem; }
+.section-title span { color:var(--accent); }
+.section-title.white { color:white; }
+.section-desc { color:var(--mid); font-size:.95rem; line-height:1.85; max-width:560px; margin-bottom:3rem; }
 
-  /* SERVICES */
-  .services-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-  .service-card {
-    border: 1.5px solid rgba(0,0,0,0.08);
-    border-radius: 20px; padding: 2rem;
-    transition: all 0.25s; position: relative; overflow: hidden;
-    background: white;
-  }
-  .service-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(27,106,228,0.12); }
-  .service-badge {
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    background: var(--light); color: #555;
-    font-size: 0.72rem; padding: 0.25rem 0.7rem; border-radius: 100px;
-    font-weight: 500; letter-spacing: 0.04em;
-  }
-  .service-badge.popular {
-    background: var(--accent); color: white;
-  }
-  .service-tier {
-    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--accent); font-weight: 500; margin-bottom: 0.5rem;
-  }
-  .service-price {
-    font-family: var(--serif); font-size: 2rem; font-weight: 700;
-    margin-bottom: 0.3rem;
-  }
-  .service-price span { font-size: 1rem; font-weight: 400; color: var(--gray); }
-  .service-name { font-size: 1rem; font-weight: 500; margin-bottom: 1.2rem; }
-  .service-features { list-style: none; margin-bottom: 1.5rem; }
-  .service-features li {
-    font-size: 0.87rem; color: #555; padding: 0.4rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    display: flex; align-items: flex-start; gap: 0.5rem;
-  }
-  .service-features li::before {
-    content: ""; width: 5px; height: 5px; border-radius: 50%;
-    background: var(--accent); margin-top: 0.55rem; flex-shrink: 0;
-  }
-  .service-note {
-    font-size: 0.8rem; color: var(--gray); margin-top: 0.8rem;
-    padding-top: 0.8rem; border-top: 1px dashed rgba(0,0,0,0.1);
-  }
+/* ── UTP ── */
+.utp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.08); border-radius:16px; overflow:hidden; }
+.utp-item { background:var(--black); padding:2.2rem 1.8rem; transition:background .25s; }
+.utp-item:hover { background:#181818; }
+.utp-num { font-family:var(--serif); font-size:2.2rem; font-weight:700; color:rgba(27,106,228,.35); line-height:1; margin-bottom:1rem; }
+.utp-item h3 { font-size:.95rem; font-weight:500; color:white; margin-bottom:.5rem; }
+.utp-item p { font-size:.85rem; color:#999; line-height:1.7; }
 
-  /* TARGETING */
-  .targeting-block {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    background: var(--light); border-radius: 24px; padding: 4rem;
-  }
-  .targeting-prices { display: flex; flex-direction: column; gap: 1rem; }
-  .t-price-item {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.2rem 1.5rem; background: white; border-radius: 14px;
-    border: 1.5px solid rgba(0,0,0,0.06);
-  }
-  .t-price-label { font-size: 0.85rem; font-weight: 500; }
-  .t-price-val {
-    font-family: var(--serif); font-size: 1.3rem;
-    font-weight: 700; color: var(--accent);
-  }
+/* ── SERVICES ── */
+.services-intro { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; margin-bottom:3.5rem; }
+.services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:2rem; }
+.scard { background:white; border:1.5px solid rgba(0,0,0,.08); border-radius:20px; padding:2rem; transition:all .25s; position:relative; overflow:hidden; }
+.scard:hover { border-color:var(--accent); transform:translateY(-3px); box-shadow:0 8px 30px rgba(27,106,228,.1); }
+.scard.featured { border-color:var(--accent); }
+.badge { position:absolute; top:1.3rem; right:1.3rem; padding:.22rem .65rem; border-radius:100px; font-size:.7rem; font-weight:500; }
+.badge.pop { background:var(--accent); color:white; }
+.badge.vip { background:var(--light); color:#555; }
+.stier { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); font-weight:500; margin-bottom:.4rem; }
+.sprice { font-family:var(--serif); font-size:1.9rem; font-weight:700; margin-bottom:.25rem; }
+.sprice small { font-size:.9rem; font-weight:400; color:var(--gray); }
+.sname { font-size:.9rem; font-weight:500; margin-bottom:1.1rem; color:var(--mid); }
+.sfeatures { list-style:none; margin-bottom:1.4rem; }
+.sfeatures li { font-size:.85rem; color:var(--mid); padding:.35rem 0; border-bottom:1px solid rgba(0,0,0,.05); display:flex; align-items:flex-start; gap:.5rem; }
+.sfeatures li::before { content:""; width:5px; height:5px; border-radius:50%; background:var(--accent); margin-top:.6rem; flex-shrink:0; }
+.snote { font-size:.78rem; color:var(--gray); padding-top:.8rem; border-top:1px dashed rgba(0,0,0,.1); }
 
-  /* PORTFOLIO */
-  .portfolio { background: var(--light); }
-  .portfolio-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
-  }
-  .portfolio-item {
-    background: white; border-radius: 20px; overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
-    text-decoration: none; color: inherit;
-    display: block;
-  }
-  .portfolio-item:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-  .portfolio-thumb {
-    aspect-ratio: 16/9;
-    position: relative; overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .thumb-1 { background: linear-gradient(135deg, #1B6AE422 0%, #5B9AF822 100%); }
-  .thumb-2 { background: linear-gradient(135deg, #0f0f0f08 0%, #0f0f0f18 100%); }
-  .thumb-3 { background: linear-gradient(135deg, #1B6AE411 0%, #5B9AF833 100%); }
-  .thumb-4 { background: linear-gradient(135deg, #1B6AE422 0%, #1B6AE408 100%); }
-  .thumb-5 { background: linear-gradient(135deg, #0f0f0f14 0%, #1B6AE411 100%); }
-  .thumb-6 { background: linear-gradient(135deg, #d0e0fb33 0%, #1B6AE422 100%); }
-  .play-btn {
-    width: 52px; height: 52px; border-radius: 50%;
-    background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem; color: var(--accent);
-    transition: transform 0.2s;
-  }
-  .portfolio-item:hover .play-btn { transform: scale(1.1); }
-  .portfolio-label { position: absolute; bottom: 0.8rem; left: 0.8rem; }
-  .portfolio-tag {
-    background: rgba(255,255,255,0.9); backdrop-filter: blur(4px);
-    padding: 0.25rem 0.7rem; border-radius: 100px;
-    font-size: 0.72rem; font-weight: 500; color: #333;
-  }
-  .portfolio-info { padding: 1.2rem 1.4rem; }
-  .portfolio-info h4 { font-size: 0.92rem; font-weight: 500; margin-bottom: 0.3rem; }
-  .portfolio-info p { font-size: 0.8rem; color: var(--gray); }
-  .portfolio-link {
-    display: inline-flex; align-items: center; gap: 0.3rem;
-    margin-top: 0.5rem; font-size: 0.8rem; color: var(--accent); font-weight: 500;
-  }
+/* Threads toggle */
+.threads-toggle { display:flex; gap:.5rem; margin:.6rem 0 .9rem; }
+.ttbtn { flex:1; padding:.4rem .5rem; border-radius:100px; border:1.5px solid rgba(0,0,0,.15); background:white; color:#555; font-size:.75rem; font-weight:500; cursor:pointer; transition:all .2s; line-height:1.5; font-family:var(--sans); }
+.ttbtn.active { background:var(--accent); color:white; border-color:var(--accent); }
 
-  /* WHY */
-  .why-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-  }
-  .why-item {
-    display: flex; gap: 1.2rem; padding: 1.5rem;
-    background: var(--light); border-radius: 16px;
-    align-items: flex-start;
-  }
-  .why-num {
-    font-family: var(--serif); font-size: 2rem; font-weight: 700;
-    color: var(--accent); line-height: 1; flex-shrink: 0; min-width: 2.5rem;
-  }
-  .why-item h4 { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; }
-  .why-item p { font-size: 0.85rem; color: #666; line-height: 1.6; }
+/* ── EXTRA SERVICES ROW ── */
+.extra-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; margin-top:2rem; }
+.extra-card { border-radius:20px; padding:2rem; }
+.extra-card.dark-card { background:var(--black); }
+.extra-card.light-card { background:var(--light); border:1.5px solid rgba(0,0,0,.07); }
+.extra-card.accent-card { background:var(--accent); }
+.etier { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; font-weight:500; margin-bottom:.5rem; }
+.extra-card.dark-card .etier { color:var(--accent); }
+.extra-card.light-card .etier { color:var(--accent); }
+.extra-card.accent-card .etier { color:rgba(255,255,255,.7); }
+.eprice { font-family:var(--serif); font-size:2rem; font-weight:700; margin-bottom:.2rem; }
+.extra-card.dark-card .eprice { color:white; }
+.extra-card.light-card .eprice { color:var(--black); }
+.extra-card.accent-card .eprice { color:white; }
+.edesc { font-size:.85rem; line-height:1.7; }
+.extra-card.dark-card .edesc { color:#999; }
+.extra-card.light-card .edesc { color:var(--mid); }
+.extra-card.accent-card .edesc { color:rgba(255,255,255,.8); }
+.extra-card.accent-card .btn-outline { border-color:white; color:white; margin-top:1.2rem; }
+.extra-card.accent-card .btn-outline:hover { background:white; color:var(--accent); }
+.shooting-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.2rem; }
+.shoot-item { background:white; border-radius:14px; padding:1.2rem 1.4rem; }
+.shoot-item.dark { background:#1a1a1a; }
+.shoot-badge { display:inline-block; background:var(--accent); color:white; font-size:.68rem; padding:.15rem .55rem; border-radius:100px; margin-bottom:.5rem; font-weight:500; }
+.shoot-price { font-family:var(--serif); font-size:1.5rem; font-weight:700; }
+.shoot-item .shoot-price { color:var(--black); }
+.shoot-item.dark .shoot-price { color:white; }
+.shoot-label { font-size:.8rem; color:var(--gray); margin-top:.15rem; }
+.shoot-item.dark .shoot-label { color:#888; }
 
-  /* OBJECTIONS */
-  .objections { background: white; }
-  .obj-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
-  }
-  .obj-item {
-    padding: 1.8rem; border: 1.5px solid rgba(0,0,0,0.07);
-    border-radius: 18px; position: relative;
-  }
-  .obj-q {
-    font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gray); margin-bottom: 0.5rem;
-  }
-  .obj-concern { font-weight: 500; margin-bottom: 0.8rem; font-size: 0.95rem; }
-  .obj-answer { font-size: 0.87rem; color: #555; line-height: 1.7; }
-  .obj-icon {
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    width: 32px; height: 32px; background: var(--accent-light);
-    border-radius: 8px; display: flex; align-items: center;
-    justify-content: center; font-size: 0.9rem;
-  }
+/* ── TARGETING ── */
+.target-wrap { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+.target-cards { display:flex; flex-direction:column; gap:1rem; }
+.tcard { display:flex; align-items:center; justify-content:space-between; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:1.2rem 1.5rem; }
+.tcard-label { font-size:.88rem; font-weight:500; color:white; }
+.tcard-sub { font-size:.78rem; color:#777; margin-top:.1rem; }
+.tcard-price { font-family:var(--serif); font-size:1.4rem; font-weight:700; color:var(--accent); }
+.tcard.incl .tcard-price { color:#22c55e; font-size:1rem; font-weight:600; }
 
-  /* PAYMENT */
-  .payment-block {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-    align-items: center;
-  }
-  .payment-steps { display: flex; flex-direction: column; gap: 0; }
-  .p-step {
-    display: flex; gap: 1.5rem; align-items: flex-start;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-  }
-  .p-step:last-child { border-bottom: none; }
-  .p-step-num {
-    width: 40px; height: 40px; border-radius: 50%;
-    background: var(--accent); color: white;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
-  }
-  .p-step h4 { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.3rem; }
-  .p-step p { font-size: 0.85rem; color: #666; }
-  .payment-note {
-    background: var(--light); border-radius: 20px; padding: 2.5rem;
-  }
-  .payment-note h3 {
-    font-family: var(--serif); font-size: 1.4rem; margin-bottom: 1rem;
-  }
-  .payment-note p { font-size: 0.9rem; color: #555; line-height: 1.8; }
-  .payment-note .highlight {
-    display: inline-block; background: var(--accent); color: white;
-    padding: 0.2rem 0.6rem; border-radius: 6px; font-weight: 500;
-  }
+/* ── PORTFOLIO ── */
+.portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.pcard { background:white; border-radius:20px; overflow:hidden; text-decoration:none; color:inherit; display:block; transition:transform .25s, box-shadow .25s; }
+.pcard:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,.1); }
+.pthumb { aspect-ratio:16/9; position:relative; display:flex; align-items:center; justify-content:center; }
+.t1{background:linear-gradient(135deg,#1B6AE422,#5B9AF822)}
+.t2{background:linear-gradient(135deg,#0f0f0f08,#0f0f0f18)}
+.t3{background:linear-gradient(135deg,#1B6AE411,#1B6AE433)}
+.t4{background:linear-gradient(135deg,#1B6AE422,#1B6AE408)}
+.t5{background:linear-gradient(135deg,#0f0f0f14,#1B6AE411)}
+.t6{background:linear-gradient(135deg,#d0e0fb33,#1B6AE422)}
+.play { width:50px; height:50px; border-radius:50%; background:white; box-shadow:0 4px 20px rgba(0,0,0,.12); display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:1.1rem; transition:transform .2s; }
+.pcard:hover .play { transform:scale(1.1); }
+.plabel { position:absolute; bottom:.8rem; left:.8rem; display:flex; gap:.4rem; flex-wrap:wrap; }
+.ptag { background:rgba(255,255,255,.92); backdrop-filter:blur(4px); padding:.22rem .65rem; border-radius:100px; font-size:.7rem; font-weight:500; color:#333; }
+.ptag.views { background:var(--accent); color:white; }
+.pinfo { padding:1.2rem 1.4rem; }
+.pinfo h4 { font-size:.9rem; font-weight:500; margin-bottom:.25rem; }
+.pinfo p { font-size:.78rem; color:var(--gray); }
+.plink { display:inline-flex; align-items:center; gap:.3rem; margin-top:.4rem; font-size:.78rem; color:var(--accent); font-weight:500; }
 
-  /* CTA */
-  .cta-section {
-    background: var(--black); color: white;
-    text-align: center; padding: 8rem 4rem;
-  }
-  .cta-section .section-label { color: var(--accent); }
-  .cta-section h2 {
-    font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.5rem);
-    margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;
-    line-height: 1.2;
-  }
-  .cta-section h2 span { color: var(--accent); }
-  .cta-section p {
-    color: #aaa; font-size: 1rem; max-width: 480px;
-    margin: 0 auto 3rem; line-height: 1.8;
-  }
-  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .btn-wa {
-    background: #25d366; color: white;
-    padding: 1rem 2.2rem; border-radius: 100px;
-    text-decoration: none; font-weight: 500; font-size: 0.95rem;
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    transition: opacity 0.2s, transform 0.2s;
-  }
-  .btn-wa:hover { opacity: 0.88; transform: translateY(-1px); }
-  .btn-ig {
-    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    color: white;
-    padding: 1rem 2.2rem; border-radius: 100px;
-    text-decoration: none; font-weight: 500; font-size: 0.95rem;
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    transition: opacity 0.2s, transform 0.2s;
-  }
-  .btn-ig:hover { opacity: 0.88; transform: translateY(-1px); }
+/* ── WHY ── */
+.why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+.why-item { padding:1.5rem; border-radius:16px; background:var(--light); }
+.why-item.accent { background:var(--accent); }
+.why-num { font-family:var(--serif); font-size:1.8rem; font-weight:700; color:var(--accent); line-height:1; margin-bottom:.8rem; }
+.why-item.accent .why-num { color:rgba(255,255,255,.4); }
+.why-item h4 { font-size:.88rem; font-weight:500; margin-bottom:.4rem; }
+.why-item.accent h4 { color:white; }
+.why-item p { font-size:.82rem; color:#666; line-height:1.65; }
+.why-item.accent p { color:rgba(255,255,255,.75); }
 
-  /* FOOTER */
-  footer {
-    padding: 2.5rem 4rem;
-    border-top: 1px solid rgba(0,0,0,0.07);
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 1rem;
-  }
-  .footer-logo {
-    font-family: var(--serif); font-size: 1.1rem;
-    text-decoration: none; color: var(--black);
-  }
-  .footer-logo span { color: var(--accent); }
-  footer p { font-size: 0.82rem; color: var(--gray); }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a {
-    font-size: 0.82rem; color: var(--gray); text-decoration: none;
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: var(--accent); }
+/* ── OBJECTIONS ── */
+.obj-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+.obj-item { padding:1.8rem; border:1.5px solid rgba(0,0,0,.07); border-radius:18px; position:relative; }
+.obj-q { font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--gray); margin-bottom:.4rem; }
+.obj-title { font-weight:500; margin-bottom:.7rem; font-size:.93rem; }
+.obj-answer { font-size:.85rem; color:var(--mid); line-height:1.75; }
+.obj-icon { position:absolute; top:1.5rem; right:1.5rem; width:30px; height:30px; background:var(--accent-light); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:.85rem; }
 
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up {
-    animation: fadeUp 0.7s ease forwards;
-    opacity: 0;
-  }
-  .delay-1 { animation-delay: 0.15s; }
-  .delay-2 { animation-delay: 0.3s; }
-  .delay-3 { animation-delay: 0.45s; }
-  .delay-4 { animation-delay: 0.6s; }
+/* ── PAYMENT ── */
+.payment-wrap { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
+.psteps { display:flex; flex-direction:column; }
+.pstep { display:flex; gap:1.4rem; align-items:flex-start; padding:1.4rem 0; border-bottom:1px solid rgba(0,0,0,.06); }
+.pstep:last-child { border:none; }
+.pstep-num { width:38px; height:38px; border-radius:50%; background:var(--accent); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.88rem; flex-shrink:0; }
+.pstep h4 { font-size:.93rem; font-weight:500; margin-bottom:.25rem; }
+.pstep p { font-size:.83rem; color:#666; }
+.pnote { background:var(--light); border-radius:20px; padding:2.5rem; }
+.pnote h3 { font-family:var(--serif); font-size:1.4rem; margin-bottom:1rem; }
+.pnote p { font-size:.88rem; color:var(--mid); line-height:1.85; }
+.hl { display:inline-block; background:var(--accent); color:white; padding:.15rem .55rem; border-radius:6px; font-weight:500; }
 
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
-    section { padding: 4rem 1.5rem; }
-    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
-    .hero-visual { display: none; }
-    .utp-grid, .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
-    .why-grid, .obj-grid, .payment-block, .targeting-block { grid-template-columns: 1fr; }
-    .hero-stats { gap: 2rem; }
-  }
+/* ── CTA ── */
+.cta { background:var(--black); color:white; text-align:center; padding:8rem 4rem; }
+.cta .section-label { color:var(--accent); }
+.cta h2 { font-family:var(--serif); font-size:clamp(1.9rem,3.5vw,3.2rem); margin-bottom:1.4rem; line-height:1.2; max-width:680px; margin-left:auto; margin-right:auto; }
+.cta h2 span { color:var(--accent); }
+.cta p { color:#aaa; font-size:.97rem; max-width:460px; margin:0 auto 2.8rem; line-height:1.85; }
+.cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+/* ── FOOTER ── */
+footer { padding:2.2rem 4rem; border-top:1px solid rgba(0,0,0,.07); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+.footer-logo { font-family:var(--serif); font-size:1.1rem; text-decoration:none; color:var(--black); }
+.footer-logo span { color:var(--accent); }
+footer p { font-size:.8rem; color:var(--gray); }
+.footer-links { display:flex; gap:1.5rem; }
+.footer-links a { font-size:.8rem; color:var(--gray); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--accent); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
+.fu { animation:fadeUp .65s ease forwards; opacity:0; }
+.d1{animation-delay:.1s} .d2{animation-delay:.25s} .d3{animation-delay:.4s} .d4{animation-delay:.55s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav { padding:1.1rem 1.5rem; }
+  .nav-links { display:none; }
+  .section { padding:4rem 1.5rem; }
+  .hero { grid-template-columns:1fr; padding:7rem 1.5rem 3rem; }
+  .hero-visual { display:none; }
+  .utp-grid,.services-grid,.portfolio-grid,.why-grid,.extra-grid { grid-template-columns:1fr; }
+  .obj-grid,.payment-wrap,.target-wrap,.services-intro { grid-template-columns:1fr; }
+  .shooting-row { grid-template-columns:1fr 1fr; }
+}
 </style>
 </head>
 <body>
@@ -498,437 +263,325 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <span class="hero-tag fade-up">Астана · SMM &amp; Таргет</span>
-    <h1 class="fade-up delay-1">Ваши соцсети — это <em>деньги.</em> Давайте их заберём</h1>
-    <p class="hero-desc fade-up delay-2">
-      Веду аккаунты под ключ: стратегия, контент, таргет и монтаж — всё в одних руках. Работаю с AI, создаю анимации и сама снимаюсь в роликах для ваших брендов.
-    </p>
-    <div class="hero-actions fade-up delay-3">
-      <a href="https://wa.me/77066786930" target="_blank" class="btn-primary">Обсудить проект ↗</a>
-      <a href="#portfolio" class="btn-secondary">Смотреть портфолио</a>
+    <span class="hero-tag fu">Астана · SMM & Таргет</span>
+    <h1 class="fu d1">Ваши соцсети — это <em>деньги.</em> Давайте их заберём</h1>
+    <p class="hero-desc fu d2">Веду аккаунты под ключ: стратегия, контент, таргет и монтаж — всё в одних руках. Работаю с AI, создаю анимации и сама снимаюсь в роликах для ваших брендов.</p>
+    <div class="hero-actions fu d3">
+      <a href="https://wa.me/77066786930" target="_blank" class="btn btn-primary">Обсудить проект ↗</a>
+      <a href="#portfolio" class="btn btn-outline">Смотреть портфолио</a>
     </div>
-    <div class="hero-stats fade-up delay-4">
-      <div>
-        <div class="stat-num">200К+</div>
-        <div class="stat-label">Просмотров на одном ролике</div>
-      </div>
-      <div>
-        <div class="stat-num">2-в-1</div>
-        <div class="stat-label">SMM + Таргет в одних руках</div>
-      </div>
-      <div>
-        <div class="stat-num">AI</div>
-        <div class="stat-label">Анимации, дизайн, визуалы</div>
-      </div>
+    <div class="hero-stats fu d4">
+      <div><div class="stat-num">200К+</div><div class="stat-label">просмотров на одном ролике</div></div>
+      <div><div class="stat-num">2-в-1</div><div class="stat-label">SMM + Таргет в одних руках</div></div>
+      <div><div class="stat-num">AI</div><div class="stat-label">анимации, дизайн, визуалы</div></div>
     </div>
   </div>
-
   <div class="hero-visual">
-    <div class="bg-circle"></div>
-    <div class="hero-card fade-up delay-2">
-      <div class="hero-avatar">А</div>
-      <h3>SMM-специалист &amp; Таргетолог</h3>
-      <p>Таргетолог · Контент-мейкер · AI-эксперт</p>
-      <div class="skills-chips">
-        <span class="chip hot">Reels &amp; Stories</span>
+    <div class="bg-blob"></div>
+    <div class="hero-card fu d2">
+      <div class="hero-avatar">A</div>
+      <h3>SMM-специалист & Таргетолог</h3>
+      <p>Контент · Таргет · AI · Монтаж</p>
+      <div class="chips">
+        <span class="chip hot">Reels & Stories</span>
         <span class="chip hot">Таргет</span>
         <span class="chip">AI-дизайн</span>
-        <span class="chip">Мультфильмы</span>
+        <span class="chip">Анимации</span>
         <span class="chip">Threads</span>
         <span class="chip">Монтаж</span>
       </div>
-      <div class="availability">
-        <div class="dot"></div>
-        Открыта к новым проектам
-      </div>
+      <div class="avail"><div class="dot"></div>Открыта к новым проектам</div>
     </div>
   </div>
 </section>
 
-<!-- UTP -->
-<section class="utp" id="why">
-  <span class="section-label">Уникальное предложение</span>
-  <div class="section-title">Почему один специалист лучше целого агентства</div>
+<!-- УТП -->
+<section class="section dark">
+  <span class="section-label">Почему я</span>
+  <div class="section-title white">Один специалист вместо <span>целого агентства</span></div>
   <div class="utp-grid">
-    <div class="utp-item">
-      <div class="utp-icon">🎬</div>
-      <h3>Снимаюсь сама и монтирую</h3>
-      <p>Снимаюсь в роликах для клиентов лично. Плюс профессиональный монтаж: динамика, музыка, субтитры — всё под ключ.</p>
-    </div>
-    <div class="utp-item">
-      <div class="utp-icon">🤖</div>
-      <h3>Работаю с AI лучше всех</h3>
-      <p>Генерирую картинки, анимационные мультфильмы, презентации и дизайн с помощью AI. Ваш контент будет выглядеть как у топовых брендов.</p>
-    </div>
-    <div class="utp-item">
-      <div class="utp-icon">🎯</div>
-      <h3>SMM + Таргет в одном лице</h3>
-      <p>Не нужно нанимать двух специалистов. Я веду контент и одновременно настраиваю рекламу — полный цикл, единая стратегия.</p>
-    </div>
-    <div class="utp-item">
-      <div class="utp-icon">💬</div>
-      <h3>Веду комьюнити 24/7</h3>
-      <p>Отвечаю на комментарии и вопросы от вашего имени. Ваша аудитория всегда чувствует заботу и вовлечённость.</p>
-    </div>
-    <div class="utp-item">
-      <div class="utp-icon">🧵</div>
-      <h3>Threads — новый канал продаж</h3>
-      <p>Подключаю Threads и выстраиваю продажи через него. Пока большинство ещё не зашли туда — вы будете первыми.</p>
-    </div>
-    <div class="utp-item">
-      <div class="utp-icon">📝</div>
-      <h3>ТЗ для мобилографа</h3>
-      <p>Пишу детальное техническое задание для вашего фотографа или видеографа — чтобы контент попадал в точку с первого раза.</p>
-    </div>
+    <div class="utp-item"><div class="utp-num">01</div><h3>Снимаюсь в роликах сама</h3><p>Выхожу в кадр лично — живое обаятельное лицо вашего бренда вместо стоковых картинок.</p></div>
+    <div class="utp-item"><div class="utp-num">02</div><h3>AI на максимум</h3><p>Генерирую картинки, анимационные мультфильмы, презентации и дизайн с помощью современного AI.</p></div>
+    <div class="utp-item"><div class="utp-num">03</div><h3>SMM + Таргет = единая система</h3><p>Не нужно координировать двух специалистов. Контент и реклама работают как одно целое.</p></div>
+    <div class="utp-item"><div class="utp-num">04</div><h3>Веду комьюнити 24/7</h3><p>Отвечаю на комментарии и вопросы от вашего имени. Аудитория всегда чувствует живой диалог.</p></div>
+    <div class="utp-item"><div class="utp-num">05</div><h3>Threads — новый канал продаж</h3><p>Подключаю Threads, пока конкуренты ещё не зашли. Вы первые — значит, вы выигрываете.</p></div>
+    <div class="utp-item"><div class="utp-num">06</div><h3>Продающие скрипты & ТЗ</h3><p>Пишу сценарии для видео и детальные ТЗ для мобилографа — контент попадает в точку с первого раза.</p></div>
   </div>
 </section>
 
-<!-- SERVICES SMM -->
-<section id="services">
-  <span class="section-label">Услуги</span>
-  <div class="section-title">SMM-пакеты — <span>выберите свой уровень</span></div>
+<!-- УСЛУГИ -->
+<section class="section" id="services">
+  <span class="section-label">Услуги & цены</span>
+  <div class="services-intro">
+    <div class="section-title" style="margin-bottom:0;">Всё что нужно вашему бренду — <span>в одном месте</span></div>
+    <div>
+      <p class="section-desc" style="margin-bottom:1.2rem;">От базового ведения до полного SMM + таргет под ключ. Выберите формат — или напишите, подберём вместе.</p>
+      <a href="https://wa.me/77066786930" target="_blank" class="btn btn-primary">Обсудить со мной ↗</a>
+    </div>
+  </div>
+
+  <!-- SMM ПАКЕТЫ -->
+  <div style="margin-bottom:.8rem;">
+    <span class="section-label">SMM-ведение Instagram</span>
+  </div>
   <div class="services-grid">
 
-    <!-- LIGHT -->
-    <div class="service-card">
-      <div class="service-tier">Лайт</div>
-      <div class="service-price">150 000 <span>₸/мес</span></div>
-      <div class="service-name">Старт в Instagram</div>
-      <ul class="service-features">
+    <!-- ЛАЙТ -->
+    <div class="scard">
+      <div class="stier">Лайт</div>
+      <div class="sprice">130 000 <small>₸/мес</small></div>
+      <div class="sname">Старт в Instagram</div>
+      <ul class="sfeatures">
         <li>Оформление профиля с нуля</li>
         <li>Дизайн актуальных историй</li>
         <li>10 Reels в месяц</li>
-        <li>5 дней × 1–2 Stories в день</li>
-        <li>Написание ТЗ для мобилографа</li>
+        <li>5 дней × 1–2 Stories/день</li>
         <li>Продающие скрипты к видео</li>
+        <li>ТЗ для мобилографа</li>
       </ul>
-      <a href="https://wa.me/77066786930" target="_blank" class="btn-secondary" style="width:100%;justify-content:center;font-size:0.9rem;">Выбрать пакет</a>
-      <div class="service-note">Оплата: 50% в начале, 50% в конце месяца</div>
+      <a href="https://wa.me/77066786930" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;font-size:.88rem;">Выбрать</a>
+      <div class="snote">Оплата: 50% в начале · 50% в конце</div>
     </div>
 
-    <!-- STANDARD -->
-    <div class="service-card" style="border-color: var(--accent);">
-      <div class="service-badge popular">Популярный</div>
-      <div class="service-tier">Стандарт</div>
-      <div class="service-price">250 000 <span>₸/мес</span></div>
-      <div class="service-name">Системный рост</div>
-      <ul class="service-features">
+    <!-- СТАНДАРТ -->
+    <div class="scard featured">
+      <div class="badge pop">Популярный</div>
+      <div class="stier">Стандарт</div>
+      <div class="threads-toggle">
+        <button class="ttbtn active" id="btn-no" onclick="setStd('no')">Без выезда<br><strong>200 000 ₸</strong></button>
+        <button class="ttbtn" id="btn-yes" onclick="setStd('yes')">С выездом<br><strong>225 000 ₸</strong></button>
+      </div>
+      <div class="sprice" id="std-price">200 000 <small>₸/мес</small></div>
+      <div class="sname">Системный рост</div>
+      <ul class="sfeatures">
         <li>Всё из пакета Лайт</li>
         <li>12 Reels в месяц</li>
-        <li>6 дней × 2–3 Stories в день</li>
-        <li>Выезд на съёмку 1–2 раза в неделю (по необходимости)</li>
+        <li>6 дней × 2–3 Stories/день</li>
         <li>Ответы на комментарии</li>
         <li>AI-контент и дизайн</li>
-        <li>Написание ТЗ для мобилографа</li>
+        <li id="std-shooting-line" style="display:none;color:var(--accent);font-weight:500;">Выезд на съёмку 1–2×/нед (+25 000 ₸)</li>
       </ul>
-      <a href="https://wa.me/77066786930" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:0.9rem;">Выбрать пакет</a>
-      <div class="service-note">Оплата: 50% в начале, 50% в конце месяца</div>
+      <a href="https://wa.me/77066786930" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;font-size:.88rem;">Выбрать</a>
+      <div class="snote">Оплата: 50% в начале · 50% в конце</div>
     </div>
 
     <!-- VIP -->
-    <div class="service-card">
-      <div class="service-badge">VIP</div>
-      <div class="service-tier">VIP</div>
-      <div class="service-price">350 000 <span>₸/мес</span></div>
-      <div class="service-name">Максимальный результат</div>
-      <ul class="service-features">
+    <div class="scard">
+      <div class="badge vip">VIP</div>
+      <div class="stier">VIP</div>
+      <div class="threads-toggle">
+        <button class="ttbtn active" id="vip-btn-no" onclick="setVip('no')">Без выезда<br><strong>300 000 ₸</strong></button>
+        <button class="ttbtn" id="vip-btn-yes" onclick="setVip('yes')">С выездом<br><strong>350 000 ₸</strong></button>
+      </div>
+      <div class="sprice" id="vip-price">300 000 <small>₸/мес</small></div>
+      <div class="sname">Максимальный результат</div>
+      <ul class="sfeatures">
         <li>Всё из пакета Стандарт</li>
         <li>15 Reels или постов в месяц</li>
         <li>Внедрение таргетированной рекламы</li>
         <li>Threads — новый канал продаж</li>
-        <li>Выезд на съёмку до 3 раз в неделю (по необходимости)</li>
-        <li>Анимационный контент с AI</li>
-        <li>Съёмка рекламного ролика со мной в кадре</li>
+        <li>Анимационный AI-контент</li>
+        <li id="vip-shooting-line" style="display:none;color:var(--accent);font-weight:500;">Выезд на съёмку до 3×/нед (+50 000 ₸)</li>
       </ul>
-      <a href="https://wa.me/77066786930" target="_blank" class="btn-secondary" style="width:100%;justify-content:center;font-size:0.9rem;">Выбрать пакет</a>
-      <div class="service-note">Оплата: 50% в начале, 50% в конце месяца</div>
+      <a href="https://wa.me/77066786930" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;font-size:.88rem;">Выбрать</a>
+      <div class="snote">Оплата: 50% в начале · 50% в конце</div>
+    </div>
+  </div>
+
+  <!-- ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ -->
+  <div style="margin-top:3rem;margin-bottom:.8rem;">
+    <span class="section-label">Отдельные услуги</span>
+  </div>
+  <div class="extra-grid">
+
+    <!-- ТАРГЕТ -->
+    <div class="extra-card dark-card">
+      <div class="etier">Таргетированная реклама</div>
+      <div style="margin-bottom:.8rem;">
+        <div style="display:flex;align-items:baseline;gap:.5rem;margin-bottom:.3rem;">
+          <div class="eprice" style="font-size:1.5rem;">45 000 ₸</div>
+          <span style="color:#777;font-size:.82rem;">первая неделя</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:.5rem;">
+          <div class="eprice" style="font-size:1.5rem;">200 000 ₸</div>
+          <span style="color:#777;font-size:.82rem;">в месяц</span>
+        </div>
+      </div>
+      <div class="edesc">Настройка кампаний в Instagram и Facebook. Тест гипотез, масштаб того, что работает. ТЗ для мобилографа — включено.</div>
+      <a href="https://wa.me/77066786930" target="_blank" class="btn btn-primary" style="margin-top:1.2rem;font-size:.85rem;">Обсудить таргет ↗</a>
+    </div>
+
+    <!-- THREADS -->
+    <div class="extra-card light-card">
+      <div class="etier">Ведение Threads</div>
+      <div class="eprice">80 000 <small style="font-size:.9rem;font-weight:400;color:var(--gray);">₸/мес</small></div>
+      <div class="edesc" style="margin-top:.4rem;">3 раза в неделю × 3 поста в день. Новая платформа с минимальной конкуренцией — пока большинство ещё не зашли, вы уже там.</div>
+      <a href="https://wa.me/77066786930" target="_blank" class="btn btn-primary" style="margin-top:1.2rem;font-size:.85rem;">Подключить Threads ↗</a>
+    </div>
+
+    <!-- СЪЁМКА -->
+    <div class="extra-card dark-card">
+      <div class="etier">Единоразовая съёмка Reels</div>
+      <div class="edesc" style="margin-bottom:1rem;">Нужен один ролик или сразу несколько? Снимаю, монтирую, отдаю готовый контент — без подписки.</div>
+      <div class="shooting-row">
+        <div class="shoot-item">
+          <div class="shoot-badge">1 Reel</div>
+          <div class="shoot-price">20 000 ₸</div>
+          <div class="shoot-label">съёмка + монтаж</div>
+        </div>
+        <div class="shoot-item dark">
+          <div class="shoot-badge">От 2 Reels</div>
+          <div class="shoot-price" style="color:var(--accent);">15 000 ₸</div>
+          <div class="shoot-label" style="color:#888;">за каждый ролик</div>
+        </div>
+      </div>
+      <a href="https://wa.me/77066786930" target="_blank" class="btn btn-primary" style="margin-top:1.2rem;font-size:.85rem;">Заказать съёмку ↗</a>
     </div>
 
   </div>
 </section>
 
-<!-- TARGETING -->
-<section style="padding-top: 0; padding-bottom: 6rem; padding-left: 4rem; padding-right: 4rem;">
-  <div class="targeting-block">
-    <div>
-      <span class="section-label">Таргет отдельно</span>
-      <div class="section-title" style="margin-bottom: 1.5rem;">Таргетированная реклама</div>
-      <p style="color:#555; font-size: 0.95rem; line-height: 1.8; margin-bottom: 2rem;">
-        Настройка рекламных кампаний в Instagram и Facebook. Первая неделя — тест гипотез и аудиторий. Дальше — масштабирование того, что работает.
-      </p>
-      <p style="font-size:0.85rem; color: var(--gray);">
-        ⚡ Минимальный период сотрудничества — <strong>1 месяц.</strong> Стоимость рекламного бюджета оплачивается отдельно.
-      </p>
-    </div>
-    <div class="targeting-prices">
-      <div class="t-price-item">
-        <div>
-          <div class="t-price-label">Первая неделя (тест)</div>
-          <div style="font-size:0.8rem; color:var(--gray);">Настройка, анализ, тест аудиторий</div>
-        </div>
-        <div class="t-price-val">45 000 ₸</div>
-      </div>
-      <div class="t-price-item">
-        <div>
-          <div class="t-price-label">Ведение в месяц</div>
-          <div style="font-size:0.8rem; color:var(--gray);">Оптимизация, отчётность, масштаб</div>
-        </div>
-        <div class="t-price-val">200 000 ₸</div>
-      </div>
-      <div class="t-price-item" style="border-color: var(--accent);">
-        <div>
-          <div class="t-price-label">ТЗ для мобилографа</div>
-          <div style="font-size:0.8rem; color:var(--gray);">Написание ТЗ для рекламных съёмок</div>
-        </div>
-        <div style="font-size:1rem; font-weight:600; color: #22c55e;">Включено</div>
-      </div>
-      <a href="https://wa.me/77066786930" target="_blank" class="btn-primary" style="align-self: flex-start; margin-top:0.5rem;">Обсудить таргет ↗</a>
-    </div>
-  </div>
-</section>
 
-<!-- PORTFOLIO -->
-<section class="portfolio" id="portfolio">
+<!-- ПОРТФОЛИО -->
+<section class="section light" id="portfolio">
   <span class="section-label">Портфолио</span>
   <div class="section-title">Работы, <span>которые продают</span></div>
   <div class="portfolio-grid">
 
-    <a href="https://www.instagram.com/reel/DSSQZVACPQ5/?igsh=MTZ0aXNjdGxqenB4Mg==" target="_blank" class="portfolio-item">
-      <div class="portfolio-thumb thumb-1">
-        <div class="play-btn">&#9654;</div>
-        <div class="portfolio-label">
-          <span class="portfolio-tag">Тренд</span>
-          <span class="portfolio-tag" style="margin-left:4px;background:rgba(27,106,228,0.12);color:#1B6AE4;">40К просмотров</span>
-        </div>
+    <a href="https://www.instagram.com/reel/DSSQZVACPQ5/?igsh=MTZ0aXNjdGxqenB4Mg==" target="_blank" class="pcard">
+      <div class="pthumb t1"><div class="play">▶</div>
+        <div class="plabel"><span class="ptag">Тренд</span><span class="ptag views">40К просмотров</span></div>
       </div>
-      <div class="portfolio-info">
-        <h4>Трендовый Reel — я в главной роли</h4>
-        <p>Снялась сама, смонтировала сама. 40 000 просмотров органически</p>
-        <span class="portfolio-link">Смотреть в Instagram &#8599;</span>
-      </div>
+      <div class="pinfo"><h4>Трендовый Reel — я в главной роли</h4><p>Снялась сама, смонтировала сама. 40 000 просмотров органически</p><span class="plink">Смотреть ↗</span></div>
     </a>
 
-    <a href="https://www.instagram.com/reel/DTU5UAqiIMe/?igsh=MTlodnFoc3JvZXBqdw==" target="_blank" class="portfolio-item">
-      <div class="portfolio-thumb thumb-2">
-        <div class="play-btn">&#9654;</div>
-        <div class="portfolio-label"><span class="portfolio-tag">Кафе Чинар</span></div>
+    <a href="https://www.instagram.com/reel/DTU5UAqiIMe/?igsh=MTlodnFoc3JvZXBqdw==" target="_blank" class="pcard">
+      <div class="pthumb t2"><div class="play">▶</div>
+        <div class="plabel"><span class="ptag">Кафе Чинар</span></div>
       </div>
-      <div class="portfolio-info">
-        <h4>Кафе Чинар — тренд, я в кадре</h4>
-        <p>Снялась сама — живое лицо бренда вместо стоковых картинок</p>
-        <span class="portfolio-link">Смотреть в Instagram &#8599;</span>
-      </div>
+      <div class="pinfo"><h4>Кафе Чинар — тренд, я в кадре</h4><p>Снялась сама — живое лицо бренда вместо стоковых картинок</p><span class="plink">Смотреть ↗</span></div>
     </a>
 
-    <a href="https://www.instagram.com/reel/DSfFu7ViHLK/?igsh=MTVicnpoOGk4NzNwdw==" target="_blank" class="portfolio-item">
-      <div class="portfolio-thumb thumb-3">
-        <div class="play-btn">&#9654;</div>
-        <div class="portfolio-label"><span class="portfolio-tag">Кафе Чинар</span></div>
+    <a href="https://www.instagram.com/reel/DSfFu7ViHLK/?igsh=MTVicnpoOGk4NzNwdw==" target="_blank" class="pcard">
+      <div class="pthumb t3"><div class="play">▶</div>
+        <div class="plabel"><span class="ptag">Кафе Чинар</span></div>
       </div>
-      <div class="portfolio-info">
-        <h4>Кафе Чинар — ролик под целевую аудиторию</h4>
-        <p>Снят точно под аудиторию заведения: правильный формат, музыка и подача — результат в просмотрах</p>
-        <span class="portfolio-link">Смотреть в Instagram &#8599;</span>
-      </div>
+      <div class="pinfo"><h4>Кафе Чинар — под целевую аудиторию</h4><p>Правильный формат, музыка и подача — результат в просмотрах</p><span class="plink">Смотреть ↗</span></div>
     </a>
 
-    <a href="https://www.instagram.com/reel/DWwJ-WCki4h/?igsh=MTB4aTNvNmw3OTQ0OQ==" target="_blank" class="portfolio-item">
-      <div class="portfolio-thumb thumb-4">
-        <div class="play-btn">&#9654;</div>
-        <div class="portfolio-label"><span class="portfolio-tag">AI-анимация</span></div>
+    <a href="https://www.instagram.com/reel/DWwJ-WCki4h/?igsh=MTB4aTNvNmw3OTQ0OQ==" target="_blank" class="pcard">
+      <div class="pthumb t4"><div class="play">▶</div>
+        <div class="plabel"><span class="ptag">AI-анимация</span></div>
       </div>
-      <div class="portfolio-info">
-        <h4>AI-анимация про филиппинских нянь</h4>
-        <p>Полностью созданный с помощью AI анимационный ролик — сценарий, визуал и монтаж — всё под ключ</p>
-        <span class="portfolio-link">Смотреть в Instagram &#8599;</span>
-      </div>
+      <div class="pinfo"><h4>AI-анимация про филиппинских нянь</h4><p>Сценарий, визуал и монтаж — всё под ключ</p><span class="plink">Смотреть ↗</span></div>
     </a>
 
-    <a href="https://www.instagram.com/reel/DVJGrzPCLig/?igsh=MTV0MzFoanlld3hnaQ==" target="_blank" class="portfolio-item">
-      <div class="portfolio-thumb thumb-5">
-        <div class="play-btn">&#9654;</div>
-        <div class="portfolio-label"><span class="portfolio-tag">Подкаст</span></div>
+    <a href="https://www.instagram.com/reel/DVJGrzPCLig/?igsh=MTV0MzFoanlld3hnaQ==" target="_blank" class="pcard">
+      <div class="pthumb t5"><div class="play">▶</div>
+        <div class="plabel"><span class="ptag">Подкаст</span></div>
       </div>
-      <div class="portfolio-info">
-        <h4>Подкаст-студия — монтаж под Reels</h4>
-        <p>Съёмка в профессиональной студии с полным монтажом: динамика, субтитры, подача под формат Instagram</p>
-        <span class="portfolio-link">Смотреть в Instagram &#8599;</span>
-      </div>
+      <div class="pinfo"><h4>Подкаст-студия — монтаж под Reels</h4><p>Динамика, субтитры, подача под формат Instagram</p><span class="plink">Смотреть ↗</span></div>
     </a>
 
-    <a href="https://www.instagram.com/reel/DVJlXoBiL7s/?igsh=dnVkaHJpM2IweXQz" target="_blank" class="portfolio-item">
-      <div class="portfolio-thumb thumb-6">
-        <div class="play-btn">&#9654;</div>
-        <div class="portfolio-label">
-          <span class="portfolio-tag">Продающий Reel</span>
-          <span class="portfolio-tag" style="margin-left:4px;background:rgba(27,106,228,0.12);color:#1B6AE4;">~200К просмотров</span>
-        </div>
+    <a href="https://www.instagram.com/reel/DVJlXoBiL7s/?igsh=dnVkaHJpM2IweXQz" target="_blank" class="pcard">
+      <div class="pthumb t6"><div class="play">▶</div>
+        <div class="plabel"><span class="ptag">Продажи</span><span class="ptag views">~200К просмотров</span></div>
       </div>
-      <div class="portfolio-info">
-        <h4>Сухой туман в Астане — ~200 000 просмотров</h4>
-        <p>Продающий ролик для локального бизнеса. Органически набрал около 200К просмотров и принёс реальные заявки</p>
-        <span class="portfolio-link">Смотреть в Instagram &#8599;</span>
+      <div class="pinfo"><h4>Сухой туман · Астана — ~200К просмотров</h4><p>Продающий ролик для локального бизнеса — реальные заявки</p><span class="plink">Смотреть ↗</span></div>
+    </a>
+
+    <a href="https://www.instagram.com/reel/DbIEdhGtd_h/?igsh=ZXEybjNsems3bXJ5" target="_blank" class="pcard">
+      <div class="pthumb t1"><div class="play">▶</div>
+        <div class="plabel"><span class="ptag">Reel</span></div>
       </div>
+      <div class="pinfo"><h4>Косметолог — монтаж Reels</h4><p>Монтаж ролика под формат Instagram — динамика, музыка, подача</p><span class="plink">Смотреть ↗</span></div>
     </a>
 
   </div>
 </section>
 
-<!-- WHY ME -->
-<section>
+<!-- ПОЧЕМУ Я -->
+<section class="section" id="why">
   <span class="section-label">Почему я</span>
   <div class="section-title">Результаты, которые <span>говорят сами</span></div>
   <div class="why-grid">
-    <div class="why-item">
-      <div class="why-num">01</div>
-      <div>
-        <h4>Два в одном — SMM и таргет</h4>
-        <p>Не нужно координировать двух специалистов. Я знаю обе стороны и выстраиваю единую систему привлечения клиентов.</p>
-      </div>
-    </div>
-    <div class="why-item">
-      <div class="why-num">02</div>
-      <div>
-        <h4>AI-инструменты на полную</h4>
-        <p>Картинки, мультфильмы, презентации, дизайн — всё с помощью современных AI. Контент как у международных брендов.</p>
-      </div>
-    </div>
-    <div class="why-item">
-      <div class="why-num">03</div>
-      <div>
-        <h4>Сама снимаюсь в рекламе</h4>
-        <p>Снимаюсь в рекламных роликах лично — живое, обаятельное лицо в кадре вместо стоковых картинок.</p>
-      </div>
-    </div>
-    <div class="why-item">
-      <div class="why-num">04</div>
-      <div>
-        <h4>Пишу продающие скрипты</h4>
-        <p>Каждое видео строится на психологии продаж: крючок, проблема, решение, призыв к действию. Работает.</p>
-      </div>
-    </div>
-    <div class="why-item">
-      <div class="why-num">05</div>
-      <div>
-        <h4>Threads — пока конкурентов нет</h4>
-        <p>Пока ваши конкуренты не подключили Threads, я выведу вас туда и выстрою продажи через новую платформу.</p>
-      </div>
-    </div>
-    <div class="why-item">
-      <div class="why-num">06</div>
-      <div>
-        <h4>ТЗ для мобилографа — включено</h4>
-        <p>Чёткое техзадание для съёмочной команды с референсами, сценарием и техническими требованиями.</p>
-      </div>
-    </div>
-    <div class="why-item">
-      <div class="why-num">07</div>
-      <div>
-        <h4>Честная оплата долями</h4>
-        <p>50% в начале месяца, 50% по итогу. Вы видите работу прежде чем платить вторую часть — никакого риска.</p>
-      </div>
-    </div>
-    <div class="why-item" style="background: var(--accent); color: white;">
-      <div class="why-num" style="color: white; opacity: 0.5;">08</div>
-      <div>
-        <h4 style="color:white;">Придумываю и реализую идеи</h4>
-        <p style="color:rgba(255,255,255,0.8);">От концепции до готового поста. Я не жду указаний — предлагаю идеи, которые работают для вашей нише.</p>
-      </div>
-    </div>
+    <div class="why-item"><div class="why-num">01</div><h4>Два в одном — SMM и таргет</h4><p>Единая стратегия вместо двух несвязанных специалистов. Контент усиливает рекламу, реклама усиливает контент.</p></div>
+    <div class="why-item"><div class="why-num">02</div><h4>AI-инструменты на полную</h4><p>Анимации, картинки, презентации, дизайн — всё с помощью современного AI. Результат как у международных брендов.</p></div>
+    <div class="why-item"><div class="why-num">03</div><h4>Снимаюсь в рекламе лично</h4><p>Не нужно искать актрису. Выхожу в кадр — продаю ваш продукт с живой подачей и обаянием.</p></div>
+    <div class="why-item accent"><div class="why-num">04</div><h4>Threads пока свободен</h4><p>Пока ваши конкуренты не зашли — я выведу вас туда первыми и выстрою продажи на новой платформе.</p></div>
+    <div class="why-item"><div class="why-num">05</div><h4>Пишу скрипты, которые продают</h4><p>Каждое видео строится на психологии: крючок → проблема → решение → призыв. Это работает.</p></div>
+    <div class="why-item"><div class="why-num">06</div><h4>ТЗ для мобилографа — включено</h4><p>Чёткое техзадание с референсами и сценарием. Съёмочная команда знает ровно что делать.</p></div>
+    <div class="why-item"><div class="why-num">07</div><h4>Придумываю и реализую идеи</h4><p>Не жду указаний — предлагаю идеи, которые подходят именно вашей нише и аудитории.</p></div>
+    <div class="why-item"><div class="why-num">08</div><h4>Честная оплата 50/50</h4><p>Платите вторую половину только после того, как увидели результат работы за месяц.</p></div>
   </div>
 </section>
 
-<!-- OBJECTIONS -->
-<section class="objections">
-  <span class="section-label">Отвечаю на вопросы</span>
-  <div class="section-title">Самые частые <span>сомнения клиентов</span></div>
+<!-- ВОЗРАЖЕНИЯ -->
+<section class="section light">
+  <span class="section-label">Частые вопросы</span>
+  <div class="section-title">Отвечаю на <span>сомнения клиентов</span></div>
   <div class="obj-grid">
     <div class="obj-item">
       <div class="obj-icon">🤔</div>
       <div class="obj-q">Возражение</div>
-      <div class="obj-concern">«Я уже пробовал SMM — не сработало»</div>
-      <div class="obj-answer">Большинство SMM-специалистов делают красивый контент без стратегии. Я строю системную воронку: контент → трафик → продажи. Разбираемся, что не сработало, и делаем иначе.</div>
+      <div class="obj-title">«Я уже пробовал SMM — не сработало»</div>
+      <div class="obj-answer">Большинство делают красивый контент без стратегии. Я строю системную воронку: контент → трафик → продажи. Разбираемся что не сработало — и делаем иначе.</div>
     </div>
     <div class="obj-item">
       <div class="obj-icon">💸</div>
       <div class="obj-q">Возражение</div>
-      <div class="obj-concern">«Дорого — не уверен в результате»</div>
+      <div class="obj-title">«Дорого — не уверен в результате»</div>
       <div class="obj-answer">Поэтому оплата 50/50. Вы платите вторую половину только после того, как увидели работу за месяц. А минимальный срок — 1 месяц, без долгих обязательств.</div>
     </div>
     <div class="obj-item">
       <div class="obj-icon">⏰</div>
       <div class="obj-q">Возражение</div>
-      <div class="obj-concern">«Нет времени объяснять — у меня busy-schedule»</div>
-      <div class="obj-answer">Именно поэтому я веду всё сама. Мне нужно 1 созвон в начале месяца для постановки задач. Дальше — работаю самостоятельно, вы получаете результат.</div>
+      <div class="obj-title">«Нет времени объяснять — я занят»</div>
+      <div class="obj-answer">Именно поэтому я веду всё сама. Нужен 1 созвон в начале месяца для постановки задач. Дальше работаю самостоятельно — вы получаете результат.</div>
     </div>
     <div class="obj-item">
       <div class="obj-icon">📊</div>
       <div class="obj-q">Возражение</div>
-      <div class="obj-concern">«Как я пойму, что реклама работает?»</div>
-      <div class="obj-answer">Предоставляю отчёт с реальными цифрами: охваты, переходы, заявки, стоимость клика. Никаких абстракций — только конкретные данные о продвижении вашего бренда.</div>
+      <div class="obj-title">«Как я пойму, что реклама работает?»</div>
+      <div class="obj-answer">Предоставляю отчёт с реальными цифрами: охваты, переходы, заявки, стоимость клика. Никаких абстракций — только данные о продвижении вашего бренда.</div>
     </div>
   </div>
 </section>
 
-<!-- PAYMENT -->
-<section style="background: var(--light);">
+<!-- УСЛОВИЯ -->
+<section class="section">
   <span class="section-label">Условия работы</span>
   <div class="section-title">Как мы <span>работаем вместе</span></div>
-  <div class="payment-block">
-    <div class="payment-steps">
-      <div class="p-step">
-        <div class="p-step-num">1</div>
-        <div>
-          <h4>Бесплатная консультация</h4>
-          <p>Разбираем ваш аккаунт, нишу и цели. Определяем подходящий пакет.</p>
-        </div>
-      </div>
-      <div class="p-step">
-        <div class="p-step-num">2</div>
-        <div>
-          <h4>Оплата 50% — старт работ</h4>
-          <p>После согласования условий — первая половина оплаты и начало работы.</p>
-        </div>
-      </div>
-      <div class="p-step">
-        <div class="p-step-num">3</div>
-        <div>
-          <h4>Месяц активной работы</h4>
-          <p>Контент, таргет, сторис, монтаж — полный цикл согласно выбранному пакету.</p>
-        </div>
-      </div>
-      <div class="p-step">
-        <div class="p-step-num">4</div>
-        <div>
-          <h4>Отчёт + оплата второй 50%</h4>
-          <p>Получаете подробный отчёт с результатами и оплачиваете вторую половину.</p>
-        </div>
-      </div>
+  <div class="payment-wrap">
+    <div class="psteps">
+      <div class="pstep"><div class="pstep-num">1</div><div><h4>Бесплатная консультация</h4><p>Разбираем ваш аккаунт, нишу и цели. Определяем подходящий пакет.</p></div></div>
+      <div class="pstep"><div class="pstep-num">2</div><div><h4>Оплата 50% — старт работ</h4><p>После согласования — первая половина оплаты и начало работы.</p></div></div>
+      <div class="pstep"><div class="pstep-num">3</div><div><h4>Месяц активной работы</h4><p>Контент, таргет, сторис, монтаж — полный цикл по выбранному пакету.</p></div></div>
+      <div class="pstep"><div class="pstep-num">4</div><div><h4>Отчёт + оплата второй 50%</h4><p>Получаете подробный отчёт с результатами — затем вторая половина оплаты.</p></div></div>
     </div>
-    <div class="payment-note">
-      <h3>Честная оплата — никакого риска для вас</h3>
-      <p>
-        Схема <span class="highlight">50% + 50%</span> специально создана, чтобы вы могли убедиться в качестве работы прежде чем платить полную сумму.<br><br>
-        Минимальный срок сотрудничества — <strong>1 месяц.</strong> Этого достаточно, чтобы увидеть реальный рост и принять решение о продолжении.<br><br>
-        После первого месяца — без обязательств. Продолжаем только если вы довольны результатом.
-      </p>
+    <div class="pnote">
+      <h3>Честная оплата — никакого риска</h3>
+      <p>Схема <span class="hl">50% + 50%</span> создана специально, чтобы вы убедились в качестве работы прежде чем платить полную сумму.<br><br>
+      Минимальный срок — <strong>1 месяц.</strong> Этого достаточно чтобы увидеть реальный рост.<br><br>
+      После первого месяца — без обязательств. Продолжаем только если вы довольны результатом.<br><br>
+      <strong>Бюджет на рекламу</strong> при таргете оплачивается отдельно.</p>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section" id="contact">
+<section class="cta" id="contact">
   <span class="section-label">Начнём?</span>
   <h2>Готовы превратить подписчиков в <span>реальных клиентов?</span></h2>
   <p>Напишите в WhatsApp или загляните в Instagram — разберём ваш проект и запустим рост уже в этом месяце</p>
-  <div class="cta-buttons">
-    <a href="https://wa.me/77066786930" target="_blank" class="btn-wa">
-      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <div class="cta-btns">
+    <a href="https://wa.me/77066786930" target="_blank" class="btn btn-wa">
+      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp
     </a>
-    <a href="https://www.instagram.com/aizhanrglv" target="_blank" class="btn-ig">
-      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-      Instagram
+    <a href="https://www.instagram.com/aizhanrglv" target="_blank" class="btn btn-ig">
+      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      @aizhanrglv
     </a>
   </div>
 </section>
@@ -936,7 +589,7 @@
 <!-- FOOTER -->
 <footer>
   <a href="#" class="footer-logo">Aizhankas<span>mm</span></a>
-  <p>SMM &amp; Таргет · Астана, Казахстан</p>
+  <p>SMM & Таргет · Астана, Казахстан</p>
   <div class="footer-links">
     <a href="https://wa.me/77066786930" target="_blank">WhatsApp</a>
     <a href="https://www.instagram.com/aizhanrglv" target="_blank">Instagram</a>
@@ -946,22 +599,60 @@
 </footer>
 
 <script>
-  const observer = new IntersectionObserver((entries) => {
+  // Стандарт toggle (с/без съёмки)
+  function setStd(val) {
+    const price = document.getElementById('std-price');
+    const line = document.getElementById('std-shooting-line');
+    const btnNo = document.getElementById('btn-no');
+    const btnYes = document.getElementById('btn-yes');
+    if (val === 'yes') {
+      price.innerHTML = '225 000 <small>₸/мес</small>';
+      line.style.display = 'flex';
+      btnYes.classList.add('active');
+      btnNo.classList.remove('active');
+    } else {
+      price.innerHTML = '200 000 <small>₸/мес</small>';
+      line.style.display = 'none';
+      btnNo.classList.add('active');
+      btnYes.classList.remove('active');
+    }
+  }
+
+  // VIP toggle (с/без съёмки)
+  function setVip(val) {
+    const price = document.getElementById('vip-price');
+    const line = document.getElementById('vip-shooting-line');
+    const btnNo = document.getElementById('vip-btn-no');
+    const btnYes = document.getElementById('vip-btn-yes');
+    if (val === 'yes') {
+      price.innerHTML = '350 000 <small>₸/мес</small>';
+      line.style.display = 'flex';
+      btnYes.classList.add('active');
+      btnNo.classList.remove('active');
+    } else {
+      price.innerHTML = '300 000 <small>₸/мес</small>';
+      line.style.display = 'none';
+      btnNo.classList.add('active');
+      btnYes.classList.remove('active');
+    }
+  }
+
+  // Scroll animations
+  const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.style.opacity = '1';
         e.target.style.transform = 'translateY(0)';
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
 
-  document.querySelectorAll('.utp-item, .service-card, .portfolio-item, .why-item, .obj-item').forEach(el => {
+  document.querySelectorAll('.utp-item,.scard,.pcard,.why-item,.obj-item,.extra-card,.tcard,.pstep').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
+    el.style.transform = 'translateY(18px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
+    obs.observe(el);
   });
 </script>
-
 </body>
 </html>
